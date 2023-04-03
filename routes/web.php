@@ -3,6 +3,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Categories;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,40 +33,35 @@ Route::get('/success', function () {
 });
 
 // Search Route
-
 Route::get('/search', [App\Http\Controllers\SearchController::class, 'show']);
 
 // Discover page
+Route::get('/stock', [App\Http\Controllers\StockController::class, 'show']);
 
-Route::get('/stock', [App\Http\Controllers\StockController::class, 'store']);
-
-// Route to categories
-
-Route::get('/drinks', [App\Http\Controllers\DrinksController::class, 'show']); // drinks
-
-// Foods
-Route::get('/foods', [App\Http\Controllers\ItemController::class, 'show']);
+// Products
+Route::get('/test', function () {
+    return view('test', [
+        'categories' => Categories::tree(),
+    ]);
+})->name('test');
 
 // Admin Panel
 // I'm a genius
 Route::group(['middleware' => ['App\Http\Middleware\AdminMiddleware']], function () {
-    Route::get('/panel', [App\Http\Controllers\FoodController::class, 'show']);
-    Route::post('/panel', [App\Http\Controllers\FoodController::class, 'store']);
+    Route::get('/panel', [App\Http\Controllers\ItemController::class, 'show']);
+    Route::post('/panel', [App\Http\Controllers\ItemController::class, 'store']);
     Route::get('/admin', function() {
         return view('admin');
     });
 });
 
 // Account page
-
 Route::get('/account', [App\Http\Controllers\AccountController::class, 'index']);
 
-// Login Route
-
+// Auth Routes
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Logout Route
-
 Route::get('/logout', [App\Http\Controllers\Auth\LogoutController::class, 'preform']);

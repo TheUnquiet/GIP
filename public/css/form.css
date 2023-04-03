@@ -6,99 +6,12 @@
     font-family: 'Chirp', sans-serif;
 }
 
-:root {
-    --height: 100vh;
+body {
+    background-color: rgb(255, 252, 253) !important;
 }
 
-#holder {
-    min-height: var(--height);
-    background-color: rgb(237, 246, 255) !important;
-    width: 100dvw;
-
-    position: relative;
-    display: flex;
+form {
+    padding: 10px;
 }
 
-.aside {
-    min-height: var(--height);
-    width: 28%;
-    float: left;
-
-    display: flex;
-    flex-direction: column;
-
-    padding: 20px 0 20px 0;
-    background-color: rgb(252, 106, 159);
-}
-
-.img-container img {
-    border-radius: 100%;
-    max-width: 200px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    ;
-}
-
-.list {
-    padding: 0 10px 0 10px;
-    list-style-type: none;
-}
-
-.border-top {
-    border-top: 1px solid #fff;
-}
-
-.list-item {
-    background-color: transparent !important;
-    outline: none;
-    text-align-last: left;
-}
-
-.list-item a {
-    color: white;
-    font-size: 20px;
-}
-
-.list-item a:hover {
-    color: white;
-}
-
-.content {
-    float: right;
-    min-height: var(--height);
-}
-
-header {
-    padding-top: 20px;
-    padding-left: 20px;
-}
-
-.sections {
-    display: flex;
-    gap: 8px;
-
-    padding: 0 8px 0 8px;
-}
-
-.section  {
-    height: 10rem;
-    width: 14rem;
-
-    background-color: rgb(252, 106, 159);
-    color: white;
-    border-radius: 24px;
-    padding: 20px;
-
-    text-align-last: left;
-    transition: .15s;
-}
-
-.section:hover {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-}
-
-.section i { font-size: 30px; color: white; }
-
-#acquisitions {
-    min-height: 100vh;
-    width: 50%;
-}
+.card-body { background-color: rgb(250, 252, 253); }

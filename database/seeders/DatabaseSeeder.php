@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Categories;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,7 +18,26 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             GuestUserSeeder::class,
-            BevSeeder::class,
         ]);
+
+        Categories::factory()
+            ->times(2)
+            ->create(['parent_id' => null])
+            ->each(
+                fn (Categories $category) => Categories::factory()
+                ->times(2)
+                ->create(['parent_id' => $category->id])
+                ->each(
+                    fn (Categories $category) => Categories::factory()
+                    ->times(2)
+                    ->create(['parent_id' => $category->id])
+                    ->each(
+                        fn (Categories $category) => Categories::factory()
+                        ->times(2)
+                        ->create(['parent_id' => $category->id])
+                    )
+    
+                )
+            );
     }
 }

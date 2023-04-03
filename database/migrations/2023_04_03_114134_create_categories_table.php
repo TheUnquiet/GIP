@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFrozenTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateFrozenTable extends Migration
      */
     public function up()
     {
-        Schema::create('frozen', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->foreignId('parent_id')->nullable()->constrained('categories');  
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateFrozenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('frozen');
+        Schema::dropIfExists('categories_table');
     }
 }

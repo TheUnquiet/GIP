@@ -24,60 +24,34 @@
 </head>
 
 <body>
-    <div id="holder">
-        <div class="aside text-center">
-            <div class="img-container"><img src="https://media.tenor.com/QT16_24NkpIAAAAM/nicki-minaj-meme.gif"
-                    alt="nicki minaj"></div>
-            <div>
-                <h3 class="text-white p-2">{{ isset(Auth::user()->name) ? Auth::user()->name : 'none' }} | Admin</h3>
-                <ul class="list">
-                    <li class="list-item p-3">
-                        <a href="/welcome">Home</a>
-                    </li>
-                    <li class="list-item p-3 border-top">
-                        <a href="/foods">Foods</a>
-                    </li>
-                    <li class="list-item p-3 border-top">
-                        <a href="/">Intro</a>
-                    </li>
-                    <li class="list-item p-3 border-top">
-                        <a href="{{ url()->previous() }}">Retrun</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="content">
-            <header>
-                <h1 class="text-left pb-4 pt-3"><b>Dashboard</b></h1>
-            </header>
-
-            <div class="sections">
-                <div class="section">
-                    <i class="fas fa-clipboard"></i>
-                    <br>
-                    Item list. <br>
-                    Name, price, type..
+    <div class="card shadow">
+        <div class="card-header text-center">Add Item to Foods table</div>
+        <div class="card-body">
+            <form action="/panel" method="post" name="item-form" id="item-form">
+                @csrf
+                <div class="form-group">
+                    <label for="type">Type:</label>
+                    <input type="text" class="form-control" id="type" name="type" placeholder="Enter type" required>
                 </div>
-                <div class="section">
-                    <i class="fa fa-address-card" aria-hidden="true"></i>
-                    <br>
-                    Item list. <br>
-                    Name, price, type..
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required>
                 </div>
-                <div class="section">
-                    <i class="fas fa-cookie"></i>
-                    <br>
-                    Item list. <br>
-                    Name, price, type..
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input type="text" class="form-control" id="price" name="price" placeholder="Enter price" required>
+                    <small class="text-muted form-text">No negative numbers</small>
                 </div>
-                <div class="section">
-                    <i class="fa fa-server" aria-hidden="true"></i>
-                    <br>
-                    Item list. <br>
-                    Name, price, type..
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <a href="{{ url()->previous() }}" class="btn btn-outline-danger">Return</a>
+                    </div>
+                    <div>
+                        <button type="reset" class="btn btn-outline-primary">Reset Form</button>
+                        <button type="submit" class="btn btn-outline-success">Submit</button>
+                    </div>
                 </div>
-            </div>
-            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+            </form>
         </div>
     </div>
 </body>

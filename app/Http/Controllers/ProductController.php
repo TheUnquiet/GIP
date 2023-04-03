@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Food;
+use App\Models\Drinks;
 use Illuminate\Http\Request;
 
-class StockController extends Controller
+class ProductController extends Controller
 {
     public function __construct()
     {
@@ -13,6 +15,6 @@ class StockController extends Controller
 
     public function show()
     {
-        return view('stock');
+        return view('food');
     }
 }
