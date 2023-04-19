@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 <head>
-    <link rel="stylesheet" href="{{ asset('css/account.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/auth/account.css') }}">
     <title>Hawk | Account</title>
 </head>
 

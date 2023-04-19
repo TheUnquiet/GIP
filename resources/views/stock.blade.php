@@ -10,16 +10,22 @@
 @section('content')
 
 <div class="top-link">
+    <?php
+        use App\Http\Controllers\ProductController;
+        $total = ProductController::cartItem();
+    ?>
     <div>
         <a href="/welcome" class="top-logo" style="font-size: 1.2em; margin-top: 13.5px;" rel="noopener noreferrer"><i class="fa fa-home" aria-hidden="true"></i></a>
         <a href="/" class="top-logo">Hawk</a>
         <a href="/about" class="top-logo">About</a>
 
-        <a href="/account" class="account">{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}</a>
+        <a href="/account" class="account">{{ isset(Auth::user()->name) ? Auth::user()->name : ""}}</a>
 
         @if (Auth::user() && Auth::user()->is_admin == 1)
             <a href="/panel" class="account" target="_blank">Panel</a>
         @endif
+        <a href="/cart" target="_blank" class="account"><i class="fa fa-cart-plus" aria-hidden="true"></i> Cart {{ $total }}</a>
+        
     </div>
 </div>
 
@@ -100,7 +106,7 @@
                     We are sure we have something that will satisfy your appetite. <br>
                     Our store is filled with an array of fresh produce, meats, dairy products, snacks and more. <br>
                     <br>
-                    Beside foods, we also have a <a href="/stock/frozen" target="_blank">Frozen</a> section, <br>
+                    Beside foods, we also have a <a href="/frozen" target="_blank">Frozen</a> section, <br>
                     full of frozen veggies and fruits to heat-dinners and desserts.
                 </p>
             </div>
@@ -167,26 +173,26 @@
     </div>
     <div class="links">
         <p>Recourses</p>
-        <a href="#" target="_blank">FAQ</a>
-        <a href="#" target="_blank">Home</a>
-        <a href="#" target="_blank">Login</a>
-        <a href="#" target="_blank">Logout</a>
-        <a href="#" target="_blank">Register</a>
+        <a href="/home" target="_blank">Home</a>
+        <a href="/login" target="_blank">Login</a>
+        <a href="/logout" target="_blank">Logout</a>
+        <a href="/register" target="_blank">Register</a>
+        <a href="/welcome" target="_blank">Welcome</a>
     </div>
 
     <div class="links">
-        <p>Products</p>
+        <p>Product Categories</p>
         <a href="/drinks" target="_blank">Beverages</a>
         <a href="/foods" target="_blank">Foods</a>
         <a href="/frozen" target="_blank">Frozen</a>
-        <a href="/fruits" target="_blank">Fruits</a>
-        <a href="/veggies" target="_blank">Veggies</a>
+        <a href="/produce#fruit" target="_blank">Fruits</a>
+        <a href="/produce#veg" target="_blank">Veggies</a>
     </div>
 
     <div class="links">
         <p>Overview</p>
         <a href="/about" target="_blank">About</a>
-        <a href="/home" target="_blank">Account</a>
+        <a href="/account" target="_blank">Account</a>
         <a href="/" target="_blank">Intro</a>
     </div>
 </footer>

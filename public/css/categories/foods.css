@@ -136,10 +136,12 @@ body {
     min-height: 18rem;
 
     border-radius: 100%;
-    background-color: rgb(255, 127, 35);
+    background-color: #ef8839;
 
     display: grid;
     place-content: center;
+
+    user-select: none;
 }
 
 .browse-btn {
@@ -158,14 +160,11 @@ body {
     font-weight: bold;
 
     padding: 10px 30px;
-    border-bottom: 4px #d27732 solid;
+    border: 1px #ef8839 solid;
     border-radius: 24px;
 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
     transition: background-color 250ms ease-out;
-
-    -webkit-transition: background-color 250ms ease-out;
-    -o-transition: background-color 250ms ease-out;
-    -moz-transition: background-color 250ms ease-out;
 }
 
 .browse-btn:hover {
@@ -175,21 +174,19 @@ body {
     background-color: #f0aa60;
 }
 
-.browse-btn:active {
-    background-color: #d25232;
-
-    border-width: 2px;
-    position: relative;
-    top: 2px;
-}
-
 #browse {
     min-height: 100vh;
 }
 
 .container-lg {
+    margin: 20px;
+}
+
+.container-xl {
     padding: 20px;
-    margin: 40px 30px 40px 100px;
+
+    display: flex;
+    justify-content: center;
 }
     
 
@@ -202,12 +199,16 @@ body {
     margin-bottom: 222px;
 }
 
+.card-img-top {
+    height: 350px;
+}
+
 .card {
     bottom: 0;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-    margin: 10px;
+    margin: 8px;
 
-    width: 20rem;
+    width: 28rem;
 }
 
 .order-btn {
@@ -282,5 +283,5 @@ body {
 
     .row { min-width: 1000px; }
 
-    .card { width: 15rem; }
+    .card { width: 18rem; }
 }

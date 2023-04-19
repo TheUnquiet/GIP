@@ -1,17 +1,40 @@
-* {
-    padding: 0;
-    margin: 0;
+.wrapper { display: flex; }
 
-    box-sizing: border-box;
-    font-family: 'Chirp', sans-serif;
+.inputBox input {
+    margin-bottom: -10px;
 }
 
-body {
-    background-color: rgb(255, 252, 253) !important;
+.form {
+    margin: 0 20px 0 20px;
+    
+    min-height: 500px;
 }
 
-form {
-    padding: 10px;
+.side-panel {
+    margin-right: auto;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    max-height: max-content;
+    min-width: 200px;
+
+    padding: 50px;
+    gap: 35px;
+    z-index: 10;
+    background-color: rgba(230, 230, 230, 0.8);
+    
+    box-shadow: 16px 16px 45px #888888;
+    bottom: 0;
+
+    overflow-y: auto;
+    max-height: 100vh;
 }
 
-.card-body { background-color: rgb(250, 252, 253); }
+.holder { width: 100%; overflow-y: hidden; }
+
+.submit-btn { margin: 6px; }
+

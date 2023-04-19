@@ -7,53 +7,79 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Link to to little logo  -->
+    <!-- Link to little logo  -->
     <link rel="icon" href="img/logos/logo-top.png" type="x-icon">
 
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/auth/login.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    {{-- Chart.js --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <script type="module"  src="js/myChart"></script>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="card shadow">
-        <div class="card-header text-center">Add Item to Foods table</div>
-        <div class="card-body">
-            <form action="/panel" method="post" name="item-form" id="item-form">
-                @csrf
-                <div class="form-group">
-                    <label for="type">Type:</label>
-                    <input type="text" class="form-control" id="type" name="type" placeholder="Enter type" required>
+    <div class="wrapper">
+
+        <div class="side-panel list">
+            @foreach ($categories as $category)
+                <p><b>{{ $category->id }}</b>
+                {{ $category->name }}</p>
+            @endforeach
+        </div>
+
+        <div class="holder">
+            <div class="form">
+                <h1 class="head">Add Product</h1>
+                <div class="center">
+                    <form action="/panel" method="post" name="item-form" id="item-form">
+                        @csrf
+                        <div class="inputBox">
+                            <input type="text" name="name" id="name" placeholder="name" required>
+                            <div class="borderLeft"></div>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="description" id="description" placeholder="description" required>
+                            <div class="borderLeft"></div>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="image_url" id="image_url" placeholder="image url" required>
+                            <div class="borderLeft"></div>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="category_id" id="category_id" placeholder="category id" required>
+                            <div class="borderLeft"></div>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="price" id="price" placeholder="price" required>
+                            <div class="borderLeft"></div>
+                        </div>
+            
+                        {{-- Buttons --}}
+                        <div class="buttons">
+                            <input type="submit" name="back" id="submit" value="Add" class="submit-btn m-2">
+                            <input type="reset" class="submit-btn m-2 " value="Reset">
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required>
-                </div>
-                <div class="form-group">
-                    <label for="price">Price:</label>
-                    <input type="text" class="form-control" id="price" name="price" placeholder="Enter price" required>
-                    <small class="text-muted form-text">No negative numbers</small>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <div>
-                        <a href="{{ url()->previous() }}" class="btn btn-outline-danger">Return</a>
-                    </div>
-                    <div>
-                        <button type="reset" class="btn btn-outline-primary">Reset Form</button>
-                        <button type="submit" class="btn btn-outline-success">Submit</button>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
+    <!--Waves Container-->
+    <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+        </svg>
+    </div>
+    <!--Waves end-->
 </body>
 
 </html>

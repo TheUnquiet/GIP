@@ -110,9 +110,9 @@ body {
 
     border-radius: 0 0 100% 100%;
 
-    --gradient-color-1: #60b6f0; 
-    --gradient-color-2: #d8defa;
-    --gradient-color-3: #b1b8f6;  
+    --gradient-color-1: #6092f0; 
+    --gradient-color-2: #d8e8fa;
+    --gradient-color-3: #b1cff6;  
     --gradient-color-4: #32add2;
 
     display: grid;
@@ -153,7 +153,7 @@ body {
     min-height: 18rem;
 
     border-radius: 100%;
-    background-color: rgba(255, 255, 255);
+    background-color: #2492db;
 
     display: grid;
     place-content: center;
@@ -168,40 +168,37 @@ body {
 
     text-decoration: none;
     text-align: center;
-    background-color: #EA3D53;
+    background-color: #3da5ea;
     color: white;
 
     font-size: 17.5px;
     font-weight: bold;
 
     padding: 10px 30px;
-    border-bottom: 4px #c53043 solid;
+    border: 1px #308ac5 solid;
     border-radius: 24px;
-
-    transition: background-color 250ms ease-out;
-    
-    -webkit-transition: background-color 250ms ease-out;
-    -o-transition: background-color 250ms ease-out;
-    -moz-transition: background-color 250ms ease-out;
 }
 
 .browse-btn:hover {
     color: white;
     text-decoration: none;
 
-    background-color: #ff4760;
-}
-
-.browse-btn:active {
-    background-color: #d2325a;
-
-    border-width: 2px;
-    position: relative;
-    top: 2px;   
+    background-color: #47acff;
 }
 
 #browse {
     min-height: 100vh;
+}
+
+.container-lg {
+    margin: 20px;
+}
+
+.container-xl {
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
 }
 
 .border-container {
@@ -228,42 +225,21 @@ body {
     margin-left: auto;
 }
 
-.w-intro h2 {
-    font-size: 4rem;
-}
-.w-intro h3 {
-    font-size: .8em;
-    font-weight: bold;
-}
-
-.tiny-title {
-    font-size: 2rem;
-    font-weight: 450;
-    color: #ee3966;
-
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.w-text {
-    font-size: 1.5rem;
-    font-weight: 400;
-
-    width: 820px;
-}
-
 .row {
     min-width: 1500px;
-
     margin-bottom: 222px;
 }
 
 .card {
     border: 0;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-    margin: 6px 10px 0 10px;
+    margin: 8px;
 
-    width: 20rem;
+    max-width: 28rem;
+}
+
+.card-img-top {
+    height: 350px;
 }
 
 .order-btn {
@@ -297,7 +273,7 @@ body {
 
     .head p { font-size: 1.2em; }
 
-    .circle { min-width: 17rem; min-height: 17rem; }
+    .circle { min-width: 15rem; min-height: 15rem; }
 
     .browse-btn { width: 125px; font-size: 15px;}
 
@@ -309,5 +285,5 @@ body {
 
     .row { min-width: 1000px; }
 
-    .card { width: 15rem; }
+    .card { width: 18rem; }
 }

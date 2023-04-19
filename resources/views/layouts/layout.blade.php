@@ -6,7 +6,7 @@
 
         <title>Hawk</title>
 
-        <!-- Link to to little logo  -->
+        <!-- Link to little logo  -->
         <link rel="icon" href="{{ asset('img/logos/logo-top.png') }}" type="x-icon">
 
         {{-- link to main stylesheet --}}
