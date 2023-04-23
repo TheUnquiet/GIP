@@ -227,7 +227,6 @@ body {
 
 .row {
     min-width: 1500px;
-
     margin-bottom: 222px;
 }
 
@@ -236,7 +235,11 @@ body {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
     margin: 8px;
 
+<<<<<<< HEAD
     width: 28rem;
+=======
+    max-width: 28rem;
+>>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 }
 
 .card-img-top {
@@ -274,7 +277,7 @@ body {
 
     .head p { font-size: 1.2em; }
 
-    .circle { min-width: 17rem; min-height: 17rem; }
+    .circle { min-width: 15rem; min-height: 15rem; }
 
     .browse-btn { width: 125px; font-size: 15px;}
 

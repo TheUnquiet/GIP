@@ -116,5 +116,24 @@ class CategorySeeder extends Seeder
             'name' => 'Ice Cream',
             'parent_id' => 4,
         ]);
+<<<<<<< HEAD
+=======
+
+        DB::table('categories')->insert([
+            'name' => 'Ready Meals',
+            'parent_id' => 4,
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Frozen Fruit',
+            'parent_id' => 4,
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Frozen Veg',
+            'parent_id' => 4,
+        ]);
+
+>>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
     }
 }

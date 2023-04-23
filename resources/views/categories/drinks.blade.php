@@ -58,7 +58,11 @@
                     <div class="row">
                         @foreach ($water->products as $item)
                         <div class="card">
+<<<<<<< HEAD
                             <img src="{{ $item->image_url }}" class="card-img-top p-2" style="object-fit: contain" alt="placeholder">
+=======
+                            <img src="{{ $item->image_url }}" class="p-2 card-img-top" style="object-fit: contain" alt="placeholder">
+>>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
                             <div class="card-body">
                                 <h5 class="card-title" style="color: #ee3966;">{{ $item->category->name }}</h5>
                                 <h5 class="card-title">{{ $item->name }}</h5>
@@ -84,7 +88,12 @@
             </div>
             <div class="container-lg">
                 <h1 style="color: #ee3966">Soda's</h1>
+<<<<<<< HEAD
                 <div class="container-xl" id="soda's">
+=======
+
+                <div class="row container" id="soda">
+>>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
                     <div class="row">
                         @foreach ($soda->products as $item)
                         <div class="card">
@@ -114,9 +123,15 @@
             </div>
             <div class="container-lg">
                 <h1 style="color: #ee3966">Juice</h1>
+<<<<<<< HEAD
                 <div class="container-xl" id="juice">
                     <div class="row">
                         @foreach ($juice->products as $item)
+=======
+
+                <div class="row container" id="juice">
+                    @foreach ($juice->products as $item)
+>>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
                         <div class="card">
                             <img src="{{ $item->image_url }}" class="card-img-top p-2" style="object-fit: contain" alt="placeholder">
                             <div class="card-body">
@@ -133,8 +148,12 @@
                                 </form>
                             </div>
                         </div>
+<<<<<<< HEAD
                         @endforeach
                     </div>
+=======
+                    @endforeach
+>>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
                 </div>
             </div>
             {{-- Soda's --}}
@@ -144,9 +163,15 @@
             </div>
             <div class="container-lg">
                 <h1 style="color: #ee3966">Dairy products</h1>
+<<<<<<< HEAD
                 <div class="container-xl" id="dairy">
                     <div class="row">
                         @foreach ($dairy->products as $item)
+=======
+
+                <div class="row container" id="dairy">
+                    @foreach ($dairy->products as $item)
+>>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
                         <div class="card">
                             <img src="{{ $item->image_url }}" class="card-img-top p-2" style="object-fit: contain" alt="placeholder">
                             <div class="card-body">
@@ -163,8 +188,12 @@
                                 </form>
                             </div>
                         </div>
+<<<<<<< HEAD
                         @endforeach
                     </div>
+=======
+                    @endforeach
+>>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
                 </div>
             </div>
         </div>

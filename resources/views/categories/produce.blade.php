@@ -53,6 +53,7 @@
         {{-- Water --}}
         <div class="container-lg">
             <h1 id="fruit" style="color: #ee3966">Fruits</h1>
+<<<<<<< HEAD
             <div class="container-xl" id="fruit">
                 <div class="row">
                     @foreach ($fruit->products as $item)
@@ -74,6 +75,28 @@
                     </div>
                     @endforeach
                 </div>
+=======
+
+            <div class="row container">
+                @foreach ($fruit->products as $item)
+                <div class="card">
+                    <img src="{{ $item->image_url }}" alt="placeholder">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #ee3966;">{{ $item->category->name }}</h5>
+                        <h5 class="card-title">{{ $item->name }}</h5>
+                        <p class="card-text">
+                            {{ $item->description }} <br>
+                            <b> Price: € {{ $item->price }} </b>
+                        </p>
+                        <form action="/add_to_cart" method="post">
+                            @csrf
+                            <input type="hidden" name="product_id" value={{ $item->id }}>
+                            <button type="submit" class="order-btn">Add to cart</button>
+                        </form>
+                    </div>
+                </div>
+                @endforeach
+>>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
             </div>
         </div>
         {{-- Soda's --}}
@@ -83,6 +106,7 @@
         </div>
         <div class="container-lg">
             <h1 id="veg" style="color: #ee3966">Veggies</h1>
+<<<<<<< HEAD
             <div class="container-xl" id="veggies">
                 <div class="row">
                     @foreach ($veggies->products as $item)
@@ -104,6 +128,28 @@
                     </div>
                     @endforeach
                 </div>
+=======
+
+            <div class="row container">
+                @foreach ($veggies->products as $item)
+                <div class="card">
+                    <img src="{{ $item->image_url }}" alt="placeholder">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #ee3966;">{{ $item->category->name }}</h5>
+                        <h5 class="card-title">{{ $item->name }}</h5>
+                        <p class="card-text">
+                            {{ $item->description }} <br>
+                            <b> Price: € {{ $item->price }} </b>
+                        </p>
+                        <form action="/add_to_cart" method="post">
+                            @csrf
+                            <input type="hidden" name="product_id" value={{ $item->id }}>
+                            <button type="submit" class="order-btn">Add to cart</button>
+                        </form>
+                    </div>
+                </div>
+                @endforeach
+>>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
             </div>
         </div>
     </div>

@@ -54,11 +54,18 @@ class ProductController extends Controller
         return view('categories.frozen', [
             'pizza' => Category::with('products')->findOrFail(18),
             'iceCream' => Category::with('products')->findOrFail(19),
+<<<<<<< HEAD
+=======
+            'readyMeals' => Category::with('products')->findOrFail(20),
+            'fruitFrozen' => Category::with('products')->findOrFail(21),
+            'vegFrozen' => Category::with('products')->findOrFail(22),
+>>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
         ]);
     }
 
     public function addToCart(Request $request)
     {
+<<<<<<< HEAD
 
         // New cart instance
         $cart = new Cart; 
@@ -66,6 +73,13 @@ class ProductController extends Controller
         $cart->user_id = $request->user()->id; 
         // Get the product's id and store it
         $cart->product_id = $request->product_id; 
+=======
+        // New cart instance
+        $cart = new Cart; 
+        $cart->user_id = $request->user()->id; 
+        $cart->product_id = $request->product_id; 
+        
+>>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
         // Save the record
         $cart->save();
         // Refresh the page

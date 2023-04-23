@@ -178,6 +178,21 @@ body {
     min-height: 100vh;
 }
 
+<<<<<<< HEAD
+=======
+.container-lg {
+    margin: 20px;
+}
+
+.container-xl {
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+    
+
+>>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 .intro h2 {
     font-size: 4rem;
 }
@@ -198,16 +213,23 @@ body {
     margin-bottom: 222px;
 }
 
+.card-img-top {
+    height: 350px;
+}
+
 .card {
     bottom: 0;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
     margin: 8px;
 
     width: 28rem;
+<<<<<<< HEAD
 }
 
 .card-img-top {
     height: 350px;
+=======
+>>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 }
 
 .order-btn {

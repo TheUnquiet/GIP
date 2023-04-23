@@ -54,6 +54,7 @@
 
         <div class="container-lg">
             <h1 style="color: #ee3966">Pizza</h1>
+<<<<<<< HEAD
             <div class="container-xl" id="pizza">
                 <div class="row">
                     @foreach ($pizza->products as $item)
@@ -75,6 +76,28 @@
                     </div>
                     @endforeach
                 </div>
+=======
+
+            <div class="row container" id="pizza">
+                @foreach ($pizza->products as $item)
+                <div class="card">
+                    <img src="{{ $item->image_url }}" alt="placeholder">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #ee3966;">{{ $item->category->name }}</h5>
+                        <h5 class="card-title">{{ $item->name }}</h5>
+                        <p class="card-text">
+                            {{ $item->description }} <br>
+                            <b> Price: € {{ $item->price }} </b>
+                        </p>
+                        <form action="/add_to_cart" method="post">
+                            @csrf
+                            <input type="hidden" name="product_id" value={{ $item->id }}>
+                            <button type="submit" class="order-btn">Add to cart</button>
+                        </form>
+                    </div>
+                </div>
+                @endforeach
+>>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
             </div>
         </div>
         <div class="border-container">
@@ -83,6 +106,7 @@
         </div>
         <div class="container-lg">
             <h1 style="color: #ee3966">Ice Cream!</h1>
+<<<<<<< HEAD
             <div class="container-xl" id="iceCream">
                 <div class="row">
                     @foreach ($iceCream->products as $item)
@@ -106,6 +130,118 @@
                 </div>
             </div>
         </div>
+=======
+
+            <div class="row container">
+                @foreach ($iceCream->products as $item)
+                <div class="card">
+                    <img src="{{ $item->image_url }}" alt="placeholder">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #ee3966;">{{ $item->category->name }}</h5>
+                        <h5 class="card-title">{{ $item->name }}</h5>
+                        <p class="card-text">
+                            {{ $item->description }} <br>
+                            <b> Price: € {{ $item->price }} </b>
+                        </p>
+                        <form action="/add_to_cart" method="post">
+                            @csrf
+                            <input type="hidden" name="product_id" value={{ $item->id }}>
+                            <button type="submit" class="order-btn">Add to cart</button>
+                        </form>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+        <div class="border-container">
+            <div class="boxLeft"></div>
+            <div class="boxRight"></div>
+        </div>
+        <div class="container-lg">
+            <h1 style="color: #ee3966">Ready Meals</h1>
+
+            <div class="row container">
+                @foreach ($readyMeals->products as $item)
+                <div class="card">
+                    <img src="{{ $item->image_url }}" alt="placeholder">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #ee3966;">{{ $item->category->name }}</h5>
+                        <h5 class="card-title">{{ $item->name }}</h5>
+                        <p class="card-text">
+                            {{ $item->description }} <br>
+                            <b> Price: € {{ $item->price }} </b>
+                        </p>
+                        <form action="/add_to_cart" method="post">
+                            @csrf
+                            <input type="hidden" name="product_id" value={{ $item->id }}>
+                            <button type="submit" class="order-btn">Add to cart</button>
+                        </form>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+        <div class="border-container">
+            <div class="boxLeft"></div>
+            <div class="boxRight"></div>
+        </div>
+        <div class="container-lg">
+            <h1 style="color: #ee3966">Frozen Fruit</h1>
+
+            <div class="row container">
+                @foreach ($fruitFrozen->products as $item)
+                <div class="card">
+                    <img src="{{ $item->image_url }}" alt="placeholder">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #ee3966;">{{ $item->category->name }}</h5>
+                        <h5 class="card-title">{{ $item->name }}</h5>
+                        <p class="card-text">
+                            {{ $item->description }} <br>
+                            <b> Price: € {{ $item->price }} </b>
+                        </p>
+                        <form action="/add_to_cart" method="post">
+                            @csrf
+                            <input type="hidden" name="product_id" value={{ $item->id }}>
+                            <button type="submit" class="order-btn">Add to cart</button>
+                        </form>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+        <div class="border-container">
+            <div class="boxLeft"></div>
+            <div class="boxRight"></div>
+        </div>
+        <div class="container-lg">
+            <h1 style="color: #ee3966">Frozen Veggies</h1>
+
+            <div class="row container">
+                @foreach ($vegFrozen->products as $item)
+                <div class="card">
+                    <img src="{{ $item->image_url }}" alt="placeholder">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #ee3966;">{{ $item->category->name }}</h5>
+                        <h5 class="card-title">{{ $item->name }}</h5>
+                        <p class="card-text">
+                            {{ $item->description }} <br>
+                            <b> Price: € {{ $item->price }} </b>
+                        </p>
+                        <form action="/add_to_cart" method="post">
+                            @csrf
+                            <input type="hidden" name="product_id" value={{ $item->id }}>
+                            <button type="submit" class="order-btn">Add to cart</button>
+                        </form>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+        <div class="border-container">
+            <div class="boxLeft"></div>
+            <div class="boxRight"></div>
+        </div>
+>>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
     </div>
     <a href="#gradient-canvas" class="back-up"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
 </div>
