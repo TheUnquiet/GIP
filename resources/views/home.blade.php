@@ -3,10 +3,11 @@
     <head>
         <link rel="stylesheet" href="css/home.css">
         <link rel="stylesheet" href="css/main.css">
-
+        
         {{-- Font --}}
         <link href="https://fonts.cdnfonts.com/css/chirp-2" rel="stylesheet">
-        <!-- Link to to little logo  -->
+
+        <!-- Link to little logo  -->
         <link rel="icon" href="img/logos/logo-top.png" type="x-icon">
         <title>Hawk | Home</title>
 
@@ -39,8 +40,7 @@
                 </div>
             </div>
         </div>
-
-        
+ 
         <!--Waves Container-->
         <div>
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"

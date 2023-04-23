@@ -18,26 +18,11 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             GuestUserSeeder::class,
+            CategorySeeder::class,
+            FoodSeeder::class,
+            BeverageSeeder::class,
+            ProduceSeeder::class,
+            FrozenSeeder::class,
         ]);
-
-        Categories::factory()
-            ->times(2)
-            ->create(['parent_id' => null])
-            ->each(
-                fn (Categories $category) => Categories::factory()
-                ->times(2)
-                ->create(['parent_id' => $category->id])
-                ->each(
-                    fn (Categories $category) => Categories::factory()
-                    ->times(2)
-                    ->create(['parent_id' => $category->id])
-                    ->each(
-                        fn (Categories $category) => Categories::factory()
-                        ->times(2)
-                        ->create(['parent_id' => $category->id])
-                    )
-    
-                )
-            );
     }
 }

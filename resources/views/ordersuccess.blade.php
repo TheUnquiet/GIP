@@ -18,11 +18,9 @@
     <body>
         <div class="inner-header flex">
             <div class="container-xl">
-                <h1>Product added!</h1>
-                <div class="buttons">
-                    <a href="/panel" class="back-btn">Go Back</a>
-                    <a href="/stock" class="back-btn">Sections!</a>
-                </div>
+                <h1>Order Placed!</h1>
+                <p>Thank you, {{ isset(Auth::user()->name) ? Auth::user()->name : "none" }}</p> <br>
+                <a href="/welcome" class="back-btn">Back home</a>
             </div>
         </div>
 

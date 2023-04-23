@@ -1,0 +1,20 @@
+.container-xxl {
+    width: 500px !important;
+}
+
+.bold { font-weight: 450; }
+
+.address input {
+    padding: 8px 12px;
+    outline: none;
+    margin: 6px 0;
+
+    background-color: transparent !important;
+    transition: .1s;
+    border: 2px #121212 solid;
+}
+
+.btn {
+    display: flex;
+    justify-content: start;
+}

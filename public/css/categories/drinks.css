@@ -1,5 +1,7 @@
-.holder {
-    position: relative;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Chirp', sans-serif;
 }
 
 html {
@@ -9,6 +11,53 @@ html {
 body {
     background-color: #f0f4fd !important;
     min-height: 100vh;
+}
+
+.content {
+    position: relative;
+}
+
+.back-up {
+    border-radius: 100%;
+    background-color: #2492db;
+    position: absolute;
+    position: fixed;
+
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    color: white;
+
+    bottom: 25px;
+    left: 20px;
+
+    width: 3rem;
+    height: 3rem;
+
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+
+    transition: all;
+    transition-duration: .2s;
+}
+
+.back-up:hover {
+    color: white;
+    text-decoration: none;
+
+    transform: translateY(-5px);
+}
+
+.grid {
+    display: grid;
+    place-items: center;
+}
+
+.shadow-box {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 25px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.font-weight {
+    font-weight: 400;
 }
 
 .account {
@@ -50,15 +99,6 @@ body {
     opacity: .7;
 }
 
-.grid {
-    display: grid;
-    place-items: center;
-}
-
-.shadow-box {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 25px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-}
-
 #gradient-canvas {
     width: 100%;
     height: 50vh;
@@ -70,10 +110,10 @@ body {
 
     border-radius: 0 0 100% 100%;
 
-    --gradient-color-1: #f0aa60; 
-    --gradient-color-2: #faebd8;
-    --gradient-color-3: #f6d8b1;  
-    --gradient-color-4: #d27732;
+    --gradient-color-1: #6092f0; 
+    --gradient-color-2: #d8e8fa;
+    --gradient-color-3: #b1cff6;  
+    --gradient-color-4: #32add2;
 
     display: grid;
     place-items: center;
@@ -90,9 +130,9 @@ body {
     padding: 50px;
 
     font-size: 90px;
-    cursor: default;
+    font-weight: 100;
 
-    color: white;
+    cursor: default;
 }
 
 .head p {
@@ -100,12 +140,65 @@ body {
     font-weight: 400;
 
     display: grid;
-    place-content: center;
+    place-items: center;
 }
 
 .head p, .head h1 {
     opacity: .89;
     font-weight: 500;
+}
+
+.circle {
+    min-width: 18rem;
+    min-height: 18rem;
+
+    border-radius: 100%;
+    background-color: #2492db;
+
+    display: grid;
+    place-content: center;
+}
+
+.browse-btn {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    width: 150px;
+
+    text-decoration: none;
+    text-align: center;
+    background-color: #3da5ea;
+    color: white;
+
+    font-size: 17.5px;
+    font-weight: bold;
+
+    padding: 10px 30px;
+    border: 1px #308ac5 solid;
+    border-radius: 24px;
+}
+
+.browse-btn:hover {
+    color: white;
+    text-decoration: none;
+
+    background-color: #47acff;
+}
+
+#browse {
+    min-height: 100vh;
+}
+
+.container-lg {
+    margin: 20px;
+}
+
+.container-xl {
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
 }
 
 .border-container {
@@ -114,107 +207,46 @@ body {
 }
 
 .boxLeft {
+    outline: 0;
     height: 0;
     width: 33%;
 
     position: relative;
-    border-top: 4px #f0aa60 solid;
+    border-top: 4px #43abf0c5 solid;
 }
 
 .boxRight {
-    height: 0;
+    outline: 0;
     width: 33%;
 
     position: relative;
-    border-top: 4px #f0aa60 solid;
+    border-top: 4px #43abf0c5 solid;
 
     margin-left: auto;
 }
 
-.circle {
-    min-width: 18rem;
-    min-height: 18rem;
-
-    border-radius: 100%;
-    background-color: rgb(255, 127, 35);
-
-    display: grid;
-    place-content: center;
-}
-
-.browse-btn {
-    display: block;
-
-    margin-top: 15px;
-    margin-bottom: 15px;
-
-    width: 150px;
-
-    text-decoration: none;
-    background-color: #ef8839;
-    color: white;
-
-    font-size: 17.5px;
-    font-weight: bold;
-
-    padding: 10px 30px;
-    border-bottom: 4px #d27732 solid;
-    border-radius: 24px;
-
-    transition: background-color 250ms ease-out;
-
-    -webkit-transition: background-color 250ms ease-out;
-    -o-transition: background-color 250ms ease-out;
-    -moz-transition: background-color 250ms ease-out;
-}
-
-.browse-btn:hover {
-    color: white;
-    text-decoration: none;
-
-    background-color: #f0aa60;
-}
-
-.browse-btn:active {
-    background-color: #d25232;
-
-    border-width: 2px;
-    position: relative;
-    top: 2px;
-}
-
-#browse {
-    min-height: 100vh;
-}
-
-.container-lg {
-    padding: 20px;
-    margin: 40px 30px 40px 100px;
-}
-    
-
-.intro h2 {
-    font-size: 4rem;
-}
-
 .row {
     min-width: 1500px;
+
     margin-bottom: 222px;
 }
 
 .card {
-    bottom: 0;
+    border: 0;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-    margin: 10px;
+    margin: 8px;
 
-    width: 20rem;
+    width: 28rem;
+}
+
+.card-img-top {
+    height: 350px;
 }
 
 .order-btn {
-    border: 2px #d25232 solid;
-    border-radius: 5px;
-    background-color: #d25232;
-    color: white;
+    border: 2px #47acff solid;
+    background-color: #47acff;
+    color: #121212;
 
     box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
@@ -223,38 +255,10 @@ body {
     transition-duration: .1s;
 }
 
+.order-btn:focus { outline: 0; }
+
 .order-btn:hover {
-    background-color: #c74a2b;
-}
-
-.back-up {
-    border-radius: 100%;
-    background-color: #d27732;
-    position: absolute;
-    position: fixed;
-
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    color: white;
-
-    bottom: 25px;
-    left: 20px;
-
-    width: 3rem;
-    height: 3rem;
-
-    display: grid;
-    place-items: center;
-    font-size: 20px;
-
-    transition: all;
-    transition-duration: .2s;
-}
-
-.back-up:hover {
-    color: white;
-    text-decoration: none;
-
-    transform: translateY(-5px);
+    background-color: #5cb6ff;
 }
 
 @media screen
@@ -270,7 +274,7 @@ body {
 
     .head p { font-size: 1.2em; }
 
-    .circle { min-width: 15rem; min-height: 15rem; }
+    .circle { min-width: 17rem; min-height: 17rem; }
 
     .browse-btn { width: 125px; font-size: 15px;}
 
@@ -282,5 +286,5 @@ body {
 
     .row { min-width: 1000px; }
 
-    .card { width: 15rem; }
+    .card { width: 18rem; }
 }

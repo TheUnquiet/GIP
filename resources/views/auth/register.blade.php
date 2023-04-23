@@ -2,7 +2,7 @@
 
 <head>
     <title>Register</title>
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/auth/register.css">
 </head>
 
 @section('content')

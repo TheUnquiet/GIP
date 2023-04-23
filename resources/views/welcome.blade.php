@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/welcome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Link to to little logo  -->
+    <!-- Link to little logo  -->
     <link rel="icon" href="img/logos/logo-top.png" type="x-icon">
 
     <style>
@@ -25,24 +25,32 @@
 </head>
 
 <body>
+    <?php
+        use App\Http\Controllers\ProductController;
+        $total = ProductController::cartItem();
+    ?>
     <div class="text-white">
         <!--Content before waves-->
         <div class="top-link p-2">
             <div>
                 <a href="/" class="top-logo">Hawk</a>
                 <a href="/about" class="top-logo">About</a>
+
+                
+                @if (Auth::user() && Auth::user()->is_admin == 1)
+                    <a href="/panel" class="top-logo" target="_blank">Panel</a>
+                @endif
             </div>
 
             <div>
+                <a href="/cart" target="_blank" class="top-logo"><i class="fa fa-cart-plus" aria-hidden="true"></i> Cart {{ $total }}</a>
+
                 @if (Route::has('login'))
                     @auth
-                        <a href="/account"
-                            class="top-logo">{{ isset(Auth::user()->name) ? Auth::user()->name : 'none' }}</a>
-                    @endauth
-                @endif
+                        <a href="/myorders" class="top-logo" target="_blank" rel="noopener noreferrer">Orders</a>
 
-                @if (Auth::user() && Auth::user()->is_admin == 1)
-                    <a href="/panel" class="top-logo" target="_blank">Panel</a>
+                        <a href="/account" class="top-logo">{{ isset(Auth::user()->name) ? Auth::user()->name : '' }}</a>
+                    @endauth
                 @endif
             </div>
         </div>

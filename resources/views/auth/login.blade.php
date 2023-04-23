@@ -3,7 +3,7 @@
 <head>
     <title>Login</title>
     {{-- Css --}}
-    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/auth/login.css') }}" rel="stylesheet">
     {{-- Font --}}
     <link href="https://fonts.cdnfonts.com/css/chirp-2" rel="stylesheet">
 
@@ -13,9 +13,7 @@
 
 </head>
 
-
 @section('content')
-
 
 <div class="holder">
     <div class="form">

@@ -17,7 +17,6 @@ class GuestUserSeeder extends Seeder
     {
         // Insert an account
         // This way you won't have to make one :)
-        // Feel free to change details.
 
         DB::table('users')->insert([
             'name' => 'Lina',
