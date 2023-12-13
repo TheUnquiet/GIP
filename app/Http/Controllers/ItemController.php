@@ -5,10 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
-<<<<<<< HEAD
-use Error;
-=======
->>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 
 class ItemController extends Controller
 {
@@ -37,10 +33,7 @@ class ItemController extends Controller
         $item->category_id = request("category_id");
 
         $item->save(); // Save the record
-<<<<<<< HEAD
         error_log($item);
-=======
->>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 
         // Show the application
         return redirect('/success');

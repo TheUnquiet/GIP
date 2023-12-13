@@ -14,7 +14,7 @@ class SearchController extends Controller
 
     public static function search($term)
     { 
-        Drinks::where('name', 'LIKE', '%'.$term.'%')->get(); 
+        //Drinks::where('name', 'LIKE', '%'.$term.'%')->get(); 
     }
 
 }

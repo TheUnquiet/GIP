@@ -182,11 +182,8 @@ body {
 .browse-btn:hover {
     color: white;
     text-decoration: none;
-<<<<<<< HEAD
-=======
 
     border: 1px #3dea7f solid;
->>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
     background-color: #3dea7f;
 }
 
@@ -195,19 +192,8 @@ body {
 }
 
 .container-lg {
-<<<<<<< HEAD
-    margin: 20px;
-}
-
-.container-xl {
-    padding: 20px;
-
-    display: flex;
-    justify-content: center;
-=======
     padding: 20px;
     margin: 40px 30px 40px 200px;
->>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 }
 
 .border-container {
@@ -243,21 +229,6 @@ body {
 .card {
     border: 0;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-<<<<<<< HEAD
-    margin: 8px;
-
-    width: 28rem;
-}
-
-.card-img-top {
-    height: 350px;
-}
-
-.order-btn {
-    border: 2px #33da7e solid;    
-    background-color: #33da7e;
-    color: #121212;
-=======
     margin: 6px 10px 0 10px;
 
     width: 20rem;
@@ -268,7 +239,6 @@ body {
     border-radius: 5px;
     background-color: rgb(51, 207, 134);
     color: white;
->>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 
     box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
@@ -277,16 +247,9 @@ body {
     transition-duration: .1s;
 }
 
-<<<<<<< HEAD
-.order-btn:focus { outline: 0; }
-
-.order-btn:hover {
-    background-color: #44fc8b;
-=======
 .order-btn:hover {
     border: 2px #33da7e solid;
     background-color: #33da7e;
->>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 }
 
 @media screen
@@ -314,9 +277,5 @@ body {
 
     .row { min-width: 1000px; }
 
-<<<<<<< HEAD
-    .card { width: 18rem; }
-=======
-    .card { width: 15rem; }
->>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
+    .card { width: 22rem; }
 }

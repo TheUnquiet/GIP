@@ -178,8 +178,6 @@ body {
     min-height: 100vh;
 }
 
-<<<<<<< HEAD
-=======
 .container-lg {
     margin: 20px;
 }
@@ -192,7 +190,6 @@ body {
 }
     
 
->>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 .intro h2 {
     font-size: 4rem;
 }
@@ -223,13 +220,6 @@ body {
     margin: 8px;
 
     width: 28rem;
-<<<<<<< HEAD
-}
-
-.card-img-top {
-    height: 350px;
-=======
->>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 }
 
 .order-btn {
@@ -305,5 +295,5 @@ body {
 
     .row { min-width: 1000px; }
 
-    .card { width: 18rem; }
+    .card { width: 22rem; }
 }

@@ -227,7 +227,7 @@ body {
 
 .row {
     min-width: 1500px;
-    margin-bottom: 222px;
+    margin-bottom:222px;
 }
 
 .card {
@@ -235,11 +235,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
     margin: 8px;
 
-<<<<<<< HEAD
-    width: 28rem;
-=======
     max-width: 28rem;
->>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 }
 
 .card-img-top {
@@ -289,5 +285,5 @@ body {
 
     .row { min-width: 1000px; }
 
-    .card { width: 18rem; }
+    .card { width: 22rem; }
 }

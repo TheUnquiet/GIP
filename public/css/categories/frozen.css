@@ -177,38 +177,25 @@ body {
     padding: 10px 30px;
     border: 1px #9966CC solid;
     border-radius: 24px;
-<<<<<<< HEAD
-
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-    transition: background-color 250ms ease-out;
-=======
->>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 }
 
 .browse-btn:hover {
     color: white;
     text-decoration: none;
 
-<<<<<<< HEAD
-    background-color: #ab75e0;
-=======
     border: 1px #7a3dea solid;
     background-color: #7a3dea;
->>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 }
 
 #browse {
     min-height: 100vh;
 }
 
-<<<<<<< HEAD
-=======
 .container-lg {
     padding: 20px;
     margin: 40px 30px 40px 200px;
 }
 
->>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 .border-container {
     display: flex;
     flex-direction: row;
@@ -246,34 +233,14 @@ body {
 
 .row {
     min-width: 1500px;
-<<<<<<< HEAD
-    margin-bottom: 222px;
-}
-
-.card {
-    bottom: 0;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-    margin: 8px;
-
-    width: 28rem;
-}
-
-=======
 
     margin-bottom: 222px;
 }
 
->>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 .card-img-top {
     height: 350px;
 }
 
-<<<<<<< HEAD
-.order-btn {
-    border: 2px solid rgb(164, 109, 216);
-    background-color: rgb(182, 104, 247);
-    color: #121212;
-=======
 .card {
     border: 0;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
@@ -287,7 +254,6 @@ body {
     border-radius: 5px;
     background-color: rgb(132, 51, 207);
     color: white;
->>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 
     box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
@@ -296,16 +262,9 @@ body {
     transition-duration: .1s;
 }
 
-<<<<<<< HEAD
-.order-btn:focus { outline: 0; }
-
-.order-btn:hover {
-    background-color: rgb(190, 110, 255);
-=======
 .order-btn:hover {
     border: 2px #6930c5 solid;
     background-color: #6930c5;
->>>>>>> b051cb2938ed49afee83102f7e8e5c46e12e4679
 }
 
 @media screen
@@ -333,5 +292,5 @@ body {
 
     .row { min-width: 1000px; }
 
-    .card { width: 18rem; }
+    .card { width: 22rem; }
 }
